@@ -14,18 +14,18 @@ tracker:
     - Duplicate
 
 polling:
-  interval_ms: 15000
+  interval_ms: 60000
 
 workspace:
   root: /Users/web3muhammad/Documents/symphony-workspaces
 
 hooks:
   after_create: |
-    git clone git@github.com:muhammadamiragaev/agent-payments.git .
+    git clone https://github.com/muhammadamiragaev/agent-payments.git .
 
 agent:
   max_concurrent_agents: 1
-  max_turns: 5
+  max_turns: 1
 
 codex:
   command: codex app-server
@@ -47,5 +47,6 @@ Rules:
 - Do not edit unrelated files.
 - Run relevant tests or checks before finishing.
 - If the task is unclear, blocked, or requires secrets, stop and explain the blocker.
-- When finished, summarize changed files and validation performed.
-
+- When the task is complete, use the available Linear tool to move the issue to Done before your final response.
+- Do not end with the issue still in Todo or In Progress unless you are blocked.
+- When finished, summarize changed files, validation performed, and the final Linear state.
