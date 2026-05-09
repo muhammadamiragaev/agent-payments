@@ -29,6 +29,7 @@ agent:
 
 codex:
   command: codex app-server
+  approval_policy: never
 ---
 
 You are working on Linear issue {{ issue.identifier }}.
