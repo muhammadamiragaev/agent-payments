@@ -28,7 +28,7 @@ agent:
   max_turns: 1
 
 codex:
-  command: codex app-server
+  command: codex --config 'model_reasoning_effort="low"' app-server
   approval_policy: never
   thread_sandbox: danger-full-access
   turn_sandbox_policy:
@@ -48,6 +48,7 @@ Rules:
 - Keep changes minimal and directly tied to the Linear issue.
 - Do not add speculative abstractions.
 - Do not edit unrelated files.
+- For small documentation/config tasks, avoid update_plan and progress messages; perform only the minimum checks needed to safely commit, push, and move the issue to Done.
 - Run relevant tests or checks before finishing.
 - If the task is unclear, blocked, or requires secrets, stop and explain the blocker.
 - If the task requires repository changes, do not move the issue to Done until the changes are committed and pushed.
