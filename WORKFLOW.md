@@ -47,6 +47,8 @@ Rules:
 - Do not edit unrelated files.
 - Run relevant tests or checks before finishing.
 - If the task is unclear, blocked, or requires secrets, stop and explain the blocker.
+- If the task requires repository changes, do not move the issue to Done until the changes are committed and pushed.
+- Do not move the issue to Done when no repository files changed unless the task was explicitly analysis-only or no-op.
 - When the task is complete, use the available Linear tool to move the issue to Done before your final response.
 - Do not end with the issue still in Todo or In Progress unless you are blocked.
-- When finished, summarize changed files, validation performed, and the final Linear state.
+- When finished, summarize changed files, validation performed, commit/push status, and the final Linear state.
